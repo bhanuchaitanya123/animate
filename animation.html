@@ -1,0 +1,61 @@
+<html>
+<body>
+<div id="o"><p id="pp">HELLO</p></div>
+<button id="p">move left</button>
+<button id="i">move right</button>
+<style>
+body{
+ background:black;
+}
+#o{
+ position:absolute;
+ top:30%;
+ left:80%;
+ font-size:80px;
+ color:#0e3742;
+ -webkit-box-reflect:below 1px linear-gradient(transparent,#0005);
+ text-align:center;
+ height:60px;
+ width:250px;
+ background:hotpink;
+ visibility:hidden;
+}
+</style>
+<script
+  src="https://code.jquery.com/jquery-1.12.4.js"
+  integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+  crossorigin="anonymous"></script>
+<script>
+ $(document).ready(function() {
+  $("#p").click(function() {
+   $("#o").css("visibility","visible");
+   $("#o").css("text-shadow", " 0 0 10px #03bcf4, 0 0 20px #03bcf4, 0 0 40px #03bcf4, 0 0 80px #03bcf4, 0 0 160px #03bcf4");
+   $("#o").animate({
+     left:'150px',
+     opacity:'5',
+     width:'260px',
+     height:'160px'
+   },3000)
+  });
+  $("#i").click(function() {
+   $("#o").css("visibility","visible");
+   $("#o").css("text-shadow", " 0 0 10px #03bcf4, 0 0 20px #03bcf4, 0 0 40px #03bcf4, 0 0 80px #03bcf4, 0 0 160px #03bcf4");
+   $("#o").css("background", "black");
+   var i=Math.floor(Math.random() *900);
+   var j=Math.floor(Math.random() *900);
+   $("#o").animate({
+     top: i + 'px',
+     left: j + 'px',
+     opacity:'5',
+     width:'260px',
+     height:'160px'
+     /*height:'toggle'*/
+   },3000)
+  });
+ });
+</script>
+<script type = "text/JavaScript">
+
+</scrpit>
+</body>
+</html>
